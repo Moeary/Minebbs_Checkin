@@ -26,4 +26,4 @@ jobs:
         env:
           COOKIE_STRING: ${{ secrets.COOKIE_STRING }}
         run: |
-          python minebbs/minebbs.py "${COOKIE_STRING}"
+          python minebbs/minebbs.py "${{ env.COOKIE_STRING }}"

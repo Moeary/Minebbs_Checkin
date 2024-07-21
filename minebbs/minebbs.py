@@ -44,7 +44,9 @@ def minebbs(cookie_string):
         print(f"未知错误: {e}")
 
 if __name__ == "__main__":
-    cookie_string = sys.argv[1]
-    assert cookie_string
+    if len(sys.argv) < 2 or not sys.argv[1]:
+        print("错误: 缺少 cookie_string 参数")
+        sys.exit(1)
     
+    cookie_string = sys.argv[1]
     minebbs(cookie_string)
